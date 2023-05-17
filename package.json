@@ -1,6 +1,6 @@
 {
   "name": "lottie-tiny",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Minify lottie images",
   "main": "lib/index.js",
   "bin": {

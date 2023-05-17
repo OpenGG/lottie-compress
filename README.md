@@ -9,7 +9,7 @@
 npx lottie-tiny input.json output.json
 
 # use tinypng
-npx lottie-tiny input.json output.json -c "tinypng"
+npx lottie-tiny input.json output.json -t "tinypng"
 ```
 
 ## Usage
