@@ -1,23 +1,31 @@
-[![NPM](https://nodei.co/npm/lottie-compress.png)](https://nodei.co/npm/lottie-compress/)
-[![Build Status](https://travis-ci.org/Lottie-Lint/lottie-compress.svg?branch=master)](https://travis-ci.org/Lottie-Lint/lottie-compress)
+[![NPM](https://nodei.co/npm/lottie-tiny.png)](https://nodei.co/npm/lottie-tiny/)
 
-# lottie compress
+# lottie tiny
 
 ## Install
 
 ```bash
-npm i -S lottie-compress
+# use pngquant
+npx lottie-tiny input.json output.json
+
+# use tinypng
+npx lottie-tiny input.json output.json -c "tinypng"
 ```
 
 ## Usage
 
 ```js
-import LottieCompress from 'lottie-compress';
+import lottieTiny from 'lottie-tiny';
 
 (async () => {
-  const lottieCompress = new LottieCompress(data);
-  const ret = await lottieCompress.execute();
-  assert(ret.tiny === '75');
+  // tinypng
+  const out = await lottieTiny(data);
+
+  // pngquant
+  const out = await lottieTiny(data, {
+    type: 'tinypng',
+  });
+  console.log(out);
 })();
 ```
 

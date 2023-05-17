@@ -1,52 +1,42 @@
 {
-  "name": "lottie-compress",
-  "version": "1.1.4",
-  "description": "lottie compress",
+  "name": "lottie-tiny",
+  "version": "1.0.3",
+  "description": "Minify lottie images",
   "main": "lib/index.js",
+  "bin": {
+    "lottie-tiny": "lib/main.js"
+  },
+  "type": "module",
   "files": [
     "lib"
   ],
   "scripts": {
-    "dev": "tsc",
-    "dev:w": "tsc --watch",
-    "build": "tsc",
-    "example": "node example/test.js",
-    "test": "egg-bin test --typescript",
-    "test-travis": "egg-bin cov --typescript",
-    "test:w": "egg-bin test --typescript --watch test/**/*.test.ts --watch-extensions ts"
+    "dev": "tsx src/main.ts",
+    "build": "rm -rf lib && tsc"
   },
   "keywords": [
     "lottie",
     "tiny",
-    "lottie compress"
+    "lottie compress",
+    "lottie tiny"
   ],
-  "author": "chenpx976",
+  "author": "OpenGG <liy099@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Lottie-Lint/lottie-compress"
+    "url": "https://github.com/OpenGG/lottie-tiny"
   },
-  "contributors": [
-    {
-      "name": "chenpx976",
-      "email": "chenpx976@gmail.com"
-    }
-  ],
   "license": "ISC",
   "dependencies": {
-    "assert": "^1.4.1",
-    "await-stream-ready": "^1.0.1",
-    "imagemin": "^7.0.0",
-    "imagemin-pngquant": "^8.0.0",
-    "mz-modules": "^2.1.0",
-    "stream-to-buf": "^1.0.0",
-    "tinify": "^1.6.0-beta.2"
+    "axios": "^1.4.0",
+    "fs-extra": "^11.1.1",
+    "imagemin": "^8.0.1",
+    "imagemin-pngquant": "^9.0.2",
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "@types/node": "^10.12.9",
-    "@types/mocha": "^5.2.7",
-    "egg-bin": "^4.9.0",
-    "ts-loader": "^5.3.0",
-    "tslint": "^5.11.0",
-    "typescript": "^3.2.1"
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "^20.1.7",
+    "tsx": "^3.12.7",
+    "typescript": "^5.0.4"
   }
 }

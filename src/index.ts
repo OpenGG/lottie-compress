@@ -1,2 +1,2 @@
-import LottieCompress from './main';
-export default LottieCompress;
+import { lottieTiny } from './lottieTiny.js';
+export { lottieTiny };
